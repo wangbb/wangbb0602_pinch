@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hand Gesture Pinch Prototype</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="stage" aria-label="Webcam hand gesture prototype">
+        <video id="webcam" class="webcam" autoplay playsinline muted></video>
+        <div id="overlay" class="overlay"></div>
+        <div class="status-panel" aria-live="polite">
+          <div>
+            <span class="label">Camera</span>
+            <strong id="cameraStatus">waiting</strong>
+          </div>
+          <div>
+            <span class="label">Hands</span>
+            <strong id="handStatus">0</strong>
+          </div>
+          <div>
+            <span class="label">Pinch</span>
+            <strong id="pinchStatus">off</strong>
+          </div>
+        </div>
+        <button id="startButton" class="start-button" type="button">Start Webcam</button>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.9.4/lib/p5.min.js" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
